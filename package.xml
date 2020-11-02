@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>eurobot2020_gazebo</name>
+  <version>0.0.0</version>
+  <description>This package contain a simulated world for eurobot 2020 (Sail The World)</description>
+
+  <maintainer email="yanis.mazouz.ros@yanis.33mail.com">Yanis Mazouz</maintainer>
+
+  <license>MIT</license>
+
+  <url type="website">http://ymazouz.com/eurobot</url>
+
+  <depend>gazebo</depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+    <gazebo_ros gazebo_media_path="${prefix}/models"/>
+  </export>
+</package>

@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+  <model name="weathercock">
+    <pose>0 0 0 0 0 0</pose>
+    <static>true</static>
+
+    <link name="weathercock">
+      <inertial>
+        <mass>0.04</mass>
+        <inertia>
+          <ixx>0.00011928</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.00011928</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.00023856</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="weathercock_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.020</length>
+            <radius>0.150</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <visual name="weathercock_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://weathercock/meshes/weathercock.dae</uri>
+            <scale>2 2 2 </scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

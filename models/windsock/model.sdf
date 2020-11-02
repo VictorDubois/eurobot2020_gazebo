@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+  <model name="windsock">
+    <static>false</static>
+    <link name="windsock_link">
+      <inertial>
+        <pose>-0.0459 -0.01153 0.011</pose>
+        <mass>0.350</mass>
+        <inertia>
+          <ixx>0.00142612</ixx>
+          <ixy>0.00139666</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00299930</iyy>
+          <iyz>0</iyz>
+          <izz>0.00439720</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="windsock_collision">
+        <pose>-0.20 -0.15 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://windsock/meshes/windsock.dae</uri>
+            <scale>1 1 1 </scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="windsock_visual">
+        <pose>-0.20 -0.15 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://windsock/meshes/windsock.dae</uri>
+            <scale>1 1 1 </scale>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

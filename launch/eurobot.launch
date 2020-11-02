@@ -1,0 +1,9 @@
+<launch>
+	<arg name="world_type" default="basic" />
+	<arg name="weathercock" default="north" />
+	<include file="$(find gazebo_ros)/launch/empty_world.launch">
+		<arg name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot2020_$(arg world_type)_$(arg weathercock).world"/>
+		<arg name="gui" value="true"/>
+	</include>
+
+</launch>

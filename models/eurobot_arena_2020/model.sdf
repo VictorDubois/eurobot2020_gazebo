@@ -1,0 +1,235 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+  <model name="eurobot_arena_2020">
+    <pose>0 0 0 0 0 0</pose>
+    <static>false</static>
+
+    <link name="table">
+      <inertial>
+        <mass>30</mass>
+        <inertia>
+          <ixx>4.55</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>4.55</iyy>
+          <iyz>0.0</iyz>
+          <izz>4.55</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="table_collision">
+        <pose>0 0 0.989 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3 2 0.022</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+          <bounce/>
+          <contact>
+            <ode/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="table_visual">
+        <pose>-1.5 1 0.978 1.57 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://eurobot_arena_2020/meshes/eurobot_arena_2020.dae</uri>
+            <scale>1 1 1 </scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="table_left">
+        <pose>0 -1.011 1.024 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3 0.022 0.092</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_right">
+        <pose>0 1.011 1.024 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3 0.022 0.092</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_top">
+        <pose>1.511 0 1.024 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 2 0.092</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_bottom">
+        <pose>-1.511 0 1.024 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 2 0.092</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_stand_collision">
+        <pose>0 0 0.489 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 1 0.978</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_tower">
+        <pose>0 1.10 1.5 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.40 0.20 1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="harbor_protection_middle">
+        <pose>0 -0.850 1.011 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 0.3 0.022</size>
+          </box>
+        </geometry>
+      </collision>
+
+
+      <collision name="harbor_protection_left">
+        <pose>-0.6 -0.925 1.011 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 0.150 0.022</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="harbor_protection_right">
+        <pose>0.6 -0.925 1.011 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 0.150 0.022</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="table_stand_visual">
+        <pose>0 0 0.489 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 1 0.978</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+
+    <include>
+      <pose>-1.27 -1.044 1.067 1.57 0 0</pose>
+      <name>windsock_blue_1</name>
+      <uri>model://windsock</uri>
+    </include>
+
+    <joint name="windsock_hinge_blue_1" type="revolute">
+      <child>windsock_blue_1::windsock_link</child>
+      <parent>table</parent>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <initial_position>0</initial_position>
+        <dynamics>
+          <friction>0.0001</friction>
+        </dynamics>
+        <limit>
+          <lower>0</lower>
+          <upper>1.93</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <include>
+      <pose>-0.865 -1.044 1.067 1.57 0 0</pose>
+      <name>windsock_blue_2</name>
+      <uri>model://windsock</uri>
+    </include>
+
+    <joint name="windsock_hinge_blue_2" type="revolute">
+      <child>windsock_blue_2::windsock_link</child>
+      <parent>table</parent>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <initial_position>0</initial_position>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <friction>0.0001</friction>
+        </dynamics>
+        <limit>
+          <lower>0</lower>
+          <upper>1.93</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <include>
+      <pose>1.27 -1.044 1.067 -1.57 3.14 0</pose>
+      <name>windsock_yellow_1</name>
+      <uri>model://windsock</uri>
+    </include>
+
+    <joint name="windsock_hinge_yellow_1" type="revolute">
+      <child>windsock_yellow_1::windsock_link</child>
+      <parent>table</parent>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <initial_position>0</initial_position>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <friction>0.0001</friction>
+        </dynamics>
+        <limit>
+          <lower>-1.93</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+
+    <include>
+      <pose>0.865 -1.044 1.067 -1.57 3.14 0</pose>
+      <name>windsock_yellow_2</name>
+      <uri>model://windsock</uri>
+    </include>
+
+    <joint name="windsock_hinge_yellow_2" type="revolute">
+      <child>windsock_yellow_2::windsock_link</child>
+      <parent>table</parent>
+      <pose>0 0 0 0 0 0</pose>
+      <axis>
+        <initial_position>0</initial_position>
+        <xyz>0 1 0</xyz>
+        <dynamics>
+          <friction>0.0001</friction>
+        </dynamics>
+        <limit>
+          <lower>-1.93</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+
+    </joint>
+  </model>
+</sdf>
