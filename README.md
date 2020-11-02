@@ -55,6 +55,7 @@ Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. S
 
 ## Acknowledgements
 [Onenight_Ros](https://github.com/Luczia/onenight_ros/)
+[PM Robotics]https://www.pm-robotix.eu/accueil/cdr2020-sailtheworld/vinyle-pm-robotix/ For the basemap
 
 [contributors-shield]: https://img.shields.io/github/contributors/scout22/eurobot2020_gazebo?style=flat-square
 [contributors-url]: https://github.com/scout22/eurobot2020_gazebo/graphs/contributors
