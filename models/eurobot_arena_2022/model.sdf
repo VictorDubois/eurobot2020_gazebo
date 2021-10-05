@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version="1.4">
-  <model name="eurobot_arena_2020">
+  <model name="eurobot_arena_2022">
     <pose>0 0 0 0 0 0</pose>
     <static>false</static>
 
@@ -41,7 +41,7 @@
         <pose>-1.5 1 0.978 1.57 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://eurobot_arena_2020/meshes/eurobot_arena_2022.dae</uri>
+            <uri>model://eurobot_arena_2022/meshes/eurobot_arena_2022.dae</uri>
             <scale>1 1 1 </scale>
           </mesh>
         </geometry>
@@ -101,8 +101,8 @@
         </geometry>
       </collision>
 
-      <collision name="harbor_protection_middle">
-        <pose>0 -0.850 1.011 0 0 0</pose>
+      <collision name="taquet_middle">
+        <pose>0 0.850 1.011 0 0 0</pose>
         <geometry>
           <box>
             <size>0.022 0.3 0.022</size>
@@ -110,24 +110,6 @@
         </geometry>
       </collision>
 
-
-      <collision name="harbor_protection_left">
-        <pose>-0.6 -0.925 1.011 0 0 0</pose>
-        <geometry>
-          <box>
-            <size>0.022 0.150 0.022</size>
-          </box>
-        </geometry>
-      </collision>
-
-      <collision name="harbor_protection_right">
-        <pose>0.6 -0.925 1.011 0 0 0</pose>
-        <geometry>
-          <box>
-            <size>0.022 0.150 0.022</size>
-          </box>
-        </geometry>
-      </collision>
 
       <visual name="table_stand_visual">
         <pose>0 0 0.489 0 0 0</pose>
@@ -139,97 +121,5 @@
       </visual>
     </link>
 
-    <include>
-      <pose>-1.27 -1.044 1.067 1.57 0 0</pose>
-      <name>windsock_blue_1</name>
-      <uri>model://windsock</uri>
-    </include>
-
-    <joint name="windsock_hinge_blue_1" type="revolute">
-      <child>windsock_blue_1::windsock_link</child>
-      <parent>table</parent>
-      <pose>0 0 0 0 0 0</pose>
-      <axis>
-        <xyz>0 1 0</xyz>
-        <initial_position>0</initial_position>
-        <dynamics>
-          <friction>0.0001</friction>
-        </dynamics>
-        <limit>
-          <lower>0</lower>
-          <upper>1.93</upper>
-        </limit>
-      </axis>
-    </joint>
-
-    <include>
-      <pose>-0.865 -1.044 1.067 1.57 0 0</pose>
-      <name>windsock_blue_2</name>
-      <uri>model://windsock</uri>
-    </include>
-
-    <joint name="windsock_hinge_blue_2" type="revolute">
-      <child>windsock_blue_2::windsock_link</child>
-      <parent>table</parent>
-      <pose>0 0 0 0 0 0</pose>
-      <axis>
-        <initial_position>0</initial_position>
-        <xyz>0 1 0</xyz>
-        <dynamics>
-          <friction>0.0001</friction>
-        </dynamics>
-        <limit>
-          <lower>0</lower>
-          <upper>1.93</upper>
-        </limit>
-      </axis>
-    </joint>
-
-    <include>
-      <pose>1.27 -1.044 1.067 -1.57 3.14 0</pose>
-      <name>windsock_yellow_1</name>
-      <uri>model://windsock</uri>
-    </include>
-
-    <joint name="windsock_hinge_yellow_1" type="revolute">
-      <child>windsock_yellow_1::windsock_link</child>
-      <parent>table</parent>
-      <pose>0 0 0 0 0 0</pose>
-      <axis>
-        <initial_position>0</initial_position>
-        <xyz>0 1 0</xyz>
-        <dynamics>
-          <friction>0.0001</friction>
-        </dynamics>
-        <limit>
-          <lower>-1.93</lower>
-          <upper>0</upper>
-        </limit>
-      </axis>
-    </joint>
-
-    <include>
-      <pose>0.865 -1.044 1.067 -1.57 3.14 0</pose>
-      <name>windsock_yellow_2</name>
-      <uri>model://windsock</uri>
-    </include>
-
-    <joint name="windsock_hinge_yellow_2" type="revolute">
-      <child>windsock_yellow_2::windsock_link</child>
-      <parent>table</parent>
-      <pose>0 0 0 0 0 0</pose>
-      <axis>
-        <initial_position>0</initial_position>
-        <xyz>0 1 0</xyz>
-        <dynamics>
-          <friction>0.0001</friction>
-        </dynamics>
-        <limit>
-          <lower>-1.93</lower>
-          <upper>0</upper>
-        </limit>
-      </axis>
-
-    </joint>
   </model>
 </sdf>
