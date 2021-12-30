@@ -110,7 +110,26 @@
         </geometry>
       </collision>
 
-      <collision name="taquet_middle">
+      <!--<collision name="taquet_middle">
+        <pose>0 0.850 1.011 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 0.3 0.022</size>
+          </box>
+        </geometry>
+      </collision>-->
+
+
+      <visual name="table_stand_visual">
+        <pose>0 0 0.479 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 1 0.978</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <collision name="taquet_middle_2022">
         <pose>0 0.850 1.011 0 0 0</pose>
         <geometry>
           <box>
@@ -119,16 +138,42 @@
         </geometry>
       </collision>
 
-
-      <visual name="table_stand_visual">
-        <pose>0 0 0.489 0 0 0</pose>
+      <collision name="frise_yellow_2022">
+        <pose>-0.690 0.915 1.011 0 0 0</pose>
         <geometry>
           <box>
-            <size>2 1 0.978</size>
+            <size>0.72 0.022 0.022</size>
           </box>
         </geometry>
-      </visual>
-    </link>
+      </collision>
 
+      <collision name="frise_purple_2022">
+        <pose>0.690 0.915 1.011 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.72 0.022 0.022</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="support_purple_2022">
+        <pose>1.287 -0.787 1.059 0 0 0.785</pose>
+        <geometry>
+          <box>
+            <size>0.721 0.120 0.022</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="support_yellow_2022">
+        <pose>-1.287 -0.787 1.059 0 0 -0.785</pose>
+        <geometry>
+          <box>
+            <size>0.721 0.120 0.022</size>
+          </box>
+        </geometry>
+      </collision>
+
+    </link>
   </model>
 </sdf>
