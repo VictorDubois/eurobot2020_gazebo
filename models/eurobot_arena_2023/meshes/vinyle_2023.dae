@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.93.5 commit date:2021-10-05, commit time:12:04, hash:a791bdabd0b2</authoring_tool>
+    </contributor>
+    <created>2021-12-28T22:12:06</created>
+    <modified>2021-12-28T22:12:06</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_cameras>
+    <camera id="Camera-camera" name="Camera">
+      <optics>
+        <technique_common>
+          <perspective>
+            <xfov sid="xfov">39.59775</xfov>
+            <aspect_ratio>1.777778</aspect_ratio>
+            <znear sid="znear">0.1</znear>
+            <zfar sid="zfar">100</zfar>
+          </perspective>
+        </technique_common>
+      </optics>
+      <extra>
+        <technique profile="blender">
+          <shiftx sid="shiftx" type="float">0</shiftx>
+          <shifty sid="shifty" type="float">0</shifty>
+          <dof_distance sid="dof_distance" type="float">10</dof_distance>
+        </technique>
+      </extra>
+    </camera>
+  </library_cameras>
+  <library_effects>
+    <effect id="ID66-effect">
+      <profile_COMMON>
+        <newparam sid="vinyle-table-2023_png-surface">
+          <surface type="2D">
+            <init_from>vinyle-table-2023_png</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="vinyle-table-2023_png-sampler">
+          <sampler2D>
+            <source>vinyle-table-2023_png-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="vinyle-table-2023_png-sampler" texcoord="UVMap"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="vinyle-table-2023_png" name="vinyle-table-2023_png">
+      <init_from>vinyle-table-2023.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="ID66-material" name="ID66">
+      <instance_effect url="#ID66-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ID763-mesh" name="ID763">
+      <mesh>
+        <source id="ID763-mesh-positions">
+          <float_array id="ID763-mesh-positions-array" count="72">3 -2 -0.02199995 3 0 -0.02199995 0 0 -0.02199995 0 -2 -0.02199995 0 -2 0 3 0 0 3 -2 0 0 0 0 0 -2 0 3 -2 0 3 -2 -0.02199995 0 -2 -0.02199995 3 -2 0 3 0 0 3 0 -0.02199995 3 -2 -0.02199995 3 0 0 0 0 0 0 0 -0.02199995 3 0 -0.02199995 0 0 0 0 -2 0 0 -2 -0.02199995 0 0 -0.02199995</float_array>
+          <technique_common>
+            <accessor source="#ID763-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID763-mesh-normals">
+          <float_array id="ID763-mesh-normals-array" count="30">0 0 -1 0 0 -1 0 0 1 0 -1 0 0 -1 0 1 0 0 0 1 0 0 1 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID763-mesh-normals-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID763-mesh-map-0">
+          <float_array id="ID763-mesh-map-0-array" count="72">1.0231e-5 1.000458 0.9979734 1.742435 1.02111e-5 1.742435 1.0231e-5 1.000458 0.9979735 1.000458 0.9979734 1.742435 1.02509e-5 6.68857e-6 0.9999887 6.86738e-6 0.9999887 1.000028 1.02509e-5 6.68857e-6 0.9999887 1.000028 1.0231e-5 1.000028 0.5001357 -4.2324e-4 1.144061 -0.01311248 1.144101 -5.98058e-4 1.144061 -0.01311248 0.5001357 -4.2324e-4 0.5000957 -0.0131126 3.41829e-5 -0.01354271 0.4413306 -0.02376085 0.4413545 -0.01354271 0.4413306 -0.02376085 3.41829e-5 -0.01354271 1.02509e-5 -0.02376085 0.4998644 -0.0131126 5.02228e-5 -4.23299e-4 1.02509e-5 -0.0131126 5.02228e-5 -4.23299e-4 0.4998644 -0.0131126 0.4999044 -4.2324e-4 1.026978 -0.02376073 0.4415698 -0.01354265 0.4415459 -0.02376079 0.4415698 -0.01354265 1.026978 -0.02376073 1.027002 -0.01354271</float_array>
+          <technique_common>
+            <accessor source="#ID763-mesh-map-0-array" count="36" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID763-mesh-vertices">
+          <input semantic="POSITION" source="#ID763-mesh-positions"/>
+        </vertices>
+        <triangles material="ID66-material" count="12">
+          <input semantic="VERTEX" source="#ID763-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID763-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID763-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 2 0 1 1 0 2 0 1 3 3 1 4 2 1 5 4 2 6 6 2 7 5 2 8 4 2 9 5 2 10 7 2 11 8 3 12 10 3 13 9 3 14 10 4 15 8 4 16 11 4 17 12 5 18 14 5 19 13 5 20 14 5 21 12 5 22 15 5 23 16 6 24 18 6 25 17 6 26 18 7 27 16 7 28 19 7 29 20 8 30 22 8 31 21 8 32 22 9 33 20 9 34 23 9 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="_1cb55ba03efd552b4e99013_125" name="61cb55ba03efd552b4e99013.125" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#ID763-mesh" name="61cb55ba03efd552b4e99013.125">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ID66-material" target="#ID66-material">
+                <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+      <node id="Camera" name="Camera" type="NODE">
+        <matrix sid="transform">0.6859207 -0.3240135 0.6515582 7.358891 0.7276763 0.3054208 -0.6141704 -6.925791 0 0.8953956 0.4452714 4.958309 0 0 0 1</matrix>
+        <instance_camera url="#Camera-camera"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -5,7 +5,9 @@
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<arg if="$(eval year == 2020)" name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot$(arg year)_$(arg world_type)_$(arg weathercock).world"/>
 		<!--<arg if="$(eval year == 2022)" name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot$(arg year)_$(arg world_type).world"/>-->
-		<arg name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot2022_basic.world"/>
+		<arg if="$(eval year == 2022)" name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot$(arg year)_$(arg world_type).world"/>
+		<!--<arg name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot2022_basic.world"/>-->
+		<arg if="$(eval year == 2023)" name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot2023_basic.world"/>
 		<arg name="gui" value="true"/>
 	</include>
 
