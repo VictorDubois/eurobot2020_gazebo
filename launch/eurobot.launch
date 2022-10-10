@@ -1,7 +1,7 @@
 <launch>
 	<arg name="world_type" default="basic" />
 	<arg name="weathercock" default="north" />
-	<arg name="year" default="2022" />
+	<arg name="year" default="2023" />
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<arg if="$(eval year == 2020)" name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot$(arg year)_$(arg world_type)_$(arg weathercock).world"/>
 		<!--<arg if="$(eval year == 2022)" name="world_name" value="$(find eurobot2020_gazebo)/worlds/eurobot$(arg year)_$(arg world_type).world"/>-->
