@@ -21,7 +21,7 @@ def generate_launch_description():
   pkg_share = FindPackageShare(package='eurobot2020_gazebo').find('eurobot2020_gazebo')
  
   # Set the path to the world file
-  world_file_name = 'eurobot2023_basic.world'
+  world_file_name = 'eurobot2024_basic.world'
   world_path = os.path.join(pkg_share, 'worlds', world_file_name)
    
   # Set the path to the SDF model files.

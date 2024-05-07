@@ -1,0 +1,218 @@
+<?xml version='1.0'?>
+<sdf version="1.4">
+  <model name="eurobot_arena_2023">
+    <pose>0 0 0 0 0 0</pose>
+    <static>false</static>
+
+    <link name="table">
+      <inertial>
+        <mass>30</mass>
+        <inertia>
+          <ixx>4.55</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>4.55</iyy>
+          <iyz>0.0</iyz>
+          <izz>4.55</izz>
+        </inertia>
+      </inertial>
+
+      <collision name="table_collision">
+        <pose>0 0 0.989 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3 2 0.022</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+          </friction>
+          <bounce/>
+          <contact>
+            <ode/>
+          </contact>
+        </surface>
+      </collision>
+      <visual name="table_visual">
+        <pose>-1.5 1 0.958 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://eurobot_arena_2023/meshes/eurobot_arena_2023_fixed.dae</uri>
+            <scale>1 1 1 </scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="vinyle_visual">
+        <pose>-1.5 1 0.978 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <uri>model://eurobot_arena_2023/meshes/vinyle_2023.dae</uri>
+            <scale>1 1 1 </scale>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <collision name="table_left">
+        <pose>0 -1.011 1.024 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3 0.022 0.092</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_right">
+        <pose>0 1.011 1.024 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>3 0.022 0.092</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_top">
+        <pose>1.511 0 1.024 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 2 0.092</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_bottom">
+        <pose>-1.511 0 1.024 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 2 0.092</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_stand_collision">
+        <pose>0 0 0.489 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 1 0.978</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="table_tower">
+        <pose>-1.6 0 1.5 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.20 0.40 1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <!--<collision name="taquet_middle">
+        <pose>0 0.850 1.011 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.022 0.3 0.022</size>
+          </box>
+        </geometry>
+      </collision>-->
+
+
+      <visual name="table_stand_visual">
+        <pose>0 0 0.479 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2 1 0.978</size>
+          </box>
+        </geometry>
+      </visual>
+
+<!--       <visual name="taquet_depart_2023_visual">
+        <pose>-1.35 0 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.03 0.03</size>
+          </box>
+        </geometry>
+      </visual>
+      <collision name="taquet_depart_2023">
+        <pose>-1.35 0 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.03 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="taquet_loin_2023_visual">
+        <pose>1.35 0 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.03 0.03</size>
+          </box>
+        </geometry>
+      </visual>
+      <collision name="taquet_loin_2023">
+        <pose>1.35 0 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.03 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="taquet_cote_1_2023_visual">
+        <pose>0 -0.985 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.03 0.03</size>
+          </box>
+        </geometry>
+      </visual>
+      <collision name="taquet_cote_1_2023">
+        <pose>0 -0.985 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.03 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+      
+      <visual name="taquet_cote_2_2023_visual">
+        <pose>0 0.985 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.03 0.03</size>
+          </box>
+        </geometry>
+      </visual>
+      <collision name="taquet_cote_2_2023">
+        <pose>0 0.985 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.3 0.03 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+
+     <collision name="taquet_front_2023">
+        <pose>0.015 1 1.015 0 0 0</pose>//faux
+        <geometry>
+          <box>
+            <size>0.03 0.3 0.03</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="taquet_back_2023">
+        <pose>2.895 1 1.015 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.3 0.03</size>
+          </box>
+        </geometry>
+      </collision>-->
+    </link>
+  </model>
+</sdf>
