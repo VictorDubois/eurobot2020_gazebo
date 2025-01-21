@@ -1,4 +1,8 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.6)
 project(eurobot2020_gazebo)
-find_package(catkin REQUIRED)
-catkin_add_env_hooks(env_variables SHELLS bash zsh DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks)
+find_package(ament_cmake REQUIRED)
+
+install(DIRECTORY launch models worlds DESTINATION share/${PROJECT_NAME})
+ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/env-hooks/eurobot2020.dsv.in")
+
+ament_package()
